@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom"
 import Index from "../pages/Index";
 import Show from "../pages/Show";
+import LandingPage from './LandingPage';
 
 const Main = (props) => {
     
@@ -11,11 +12,13 @@ const Main = (props) => {
     const getJob = async () => {
         const response = await fetch(url)
         const data = await response.json()
+        console.log('data', data)
         setJob(data)
     }
     
     
     const createJob = async (posting) => {
+        console.log('posting', posting)
         await fetch(url, { 
             method: "POST",
             headers: { 
@@ -52,7 +55,8 @@ const Main = (props) => {
     return (
     <main>
     <Routes> 
-        <Route exact path="/jobs" element={<Index job={job} createJob={createJob} />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route exact path="/jobs" element={<Index job={job} createJob={createJob} updateJob={updateJob} deleteJob={deleteJob} /> } />
         <Route path="/jobs/:id" element={<Show job={job} updateJob={updateJob} deleteJob={deleteJob}/> } /> 
     </Routes>
     </main>

@@ -11,19 +11,19 @@ const Header = (props) => {
           <img src="" alt="Logo" />
         </div>
         <ul className="nav-links">
-        <li><Link to="/">About</Link></li>
+        <li><Link to="/about">About</Link></li>
 
             {
                 props.user ?
                 <>
-                    <li> Welcome,  {props.user.displayName}</li>
+                    <li> Welcome,  {props.user.displayName} </li>
                     <li>
                         <img className='profilePhoto' src={props.user.photoURL} alt = {props.user.displayName} />
                     </li>
                 <li onClick={logout}>Logout</li>
                 </>
                 :
-                <li onClick={login}>Sign In</li>
+                <li onClick={login}>Sign In With Google</li>
             }
         </ul>
       </nav>

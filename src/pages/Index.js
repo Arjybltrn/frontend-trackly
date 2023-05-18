@@ -29,9 +29,9 @@ const Index = (props) => {
    const loaded = () => {
     return props.job.map((posting) => (
       <div key={posting._id} className="posting">
-        <Link to={`/jobs/${posting._id}`}><h1>{posting.name}</h1></Link>
-        <img src={posting.image} alt={posting.name} />
-        <h3>{posting.title}</h3>
+        <Link to={`/jobs/${posting._id}`}><h1>{posting.jobTitle}</h1></Link>
+        <h3>{posting.company}</h3>
+        <h3>{posting.notes}</h3>
       </div>
     ));
   };
@@ -47,7 +47,7 @@ const Index = (props) => {
           type="text"
           value={newForm.jobTitle}
           name="jobTitle"
-          placeholder="name"
+          placeholder="job title"
           onChange={handleChange}
         />
         <input
@@ -64,7 +64,7 @@ const Index = (props) => {
           placeholder="notes"
           onChange={handleChange}
         />
-        <input type="submit" value="Create New Job" />
+        <input type="submit" value="Create Job" />
       </form>
 
       {props.job ? loaded() : loading()}
