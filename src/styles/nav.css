@@ -1,0 +1,47 @@
+
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* Logo */
+  .logo img {
+    height: 50px;
+    width: auto;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  
+  .nav-links li a:hover {
+    color: #000;
+    
+  }
+
+
+li {
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.profilePhoto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+ 
