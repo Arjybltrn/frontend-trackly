@@ -55,6 +55,7 @@ const Show = (props) => {
       { posting ? loaded() : loading() }
 
       { isEditing && 
+      <div className="create-form">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -79,6 +80,7 @@ const Show = (props) => {
         />
         <input type="submit" value="Update Job" />
       </form>
+      </div>
     }
 
     </div>
