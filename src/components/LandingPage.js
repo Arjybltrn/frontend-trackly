@@ -1,36 +1,47 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { login, auth } from '../services/firebase';
+import { googleLogin, fbLogin, auth} from '../services/firebase';
+import 'firebase/auth';
 
-const LandingPage = () => {
-  const [isSignUp, setIsSignUp] = useState(false);
-  const [isLogIn, setIsLogIn] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
-  const navigate = useNavigate();
+const LandingPage = ({ user }) => {
+  const [isSignUp, setIsSignUp] = useState(false)
+  const [isLogIn, setIsLogIn] = useState(false)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState(null)
+  const navigate = useNavigate()
 
   const handleSignUp = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
       await auth.createUserWithEmailAndPassword(email, password);
-      setError(null);
+      setError(null)
     } catch (error) {
       setError(error.message);
     }
-    
-    };
-    const handleLogIn = async (e) => {
-        e.preventDefault();
-        try {
-          await auth.signInWithEmailAndPassword(email, password);
-          setError(null);
-          navigate('/jobs'); // Redirect to /jobs after successful login
-        } catch (error) {
-          setError(error.message);
-        }
-      };
+  };
+
+  const handleLogIn = async (e) => {
+    e.preventDefault()
+    try {
+      await auth.signInWithEmailAndPassword(email, password);
+      setError(null)
+      navigate('/jobs') // redirect to /jobs after successful login
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+
+//   const handleGoogleLogin = async () => {
+//     try {
+//       const provider = new firebase.auth.GoogleAuthProvider();
+//       await auth.signInWithPopup(provider);
+//       navigate('/jobs');
+//     } catch (error) {
+//       setError(error.message);
+//     }
+//   };
 
   const toggleSignUp = () => {
     setIsSignUp(!isSignUp);
@@ -51,20 +62,26 @@ const LandingPage = () => {
         <h2>Taskly</h2>
       </div>
 
+      <div><button onClick={googleLogin}>Sign In With Google</button></div>
+      <div><button onClick={fbLogin}>Sign In With Facebook</button></div>
 
       <div className="toggle-buttons">
-        <div><button onClick={login}>Sign In With Google</button></div>
-            <div>
-                <span>Don't have an account?</span>
-                <button onClick={toggleSignUp}>Sign Up</button>
-            </div>
-            <div>
-                <span>Already have an account?</span>
-                <button onClick={toggleLogIn}>Log In</button>
-            </div>
+      
+        {!user && (
+          <div>
+            <span>Don't have an account?</span>
+            <button onClick={toggleSignUp}>Sign Up</button>
+          </div>
+        )}
+        {!user && (
+          <div>
+            <span>Already have an account?</span>
+            <button onClick={toggleLogIn}>Log In</button>
+          </div>
+        )}
       </div>
 
-        {/* signup state */}
+      {/* signup state */}
       {isSignUp && (
         <div className="form-container">
           <h2>Sign Up</h2>
@@ -86,7 +103,7 @@ const LandingPage = () => {
         </div>
       )}
 
-         {/* login state */}
+      {/* login state */}
       {isLogIn && (
         <div className="form-container">
           <h2>Log In</h2>
@@ -113,8 +130,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-
-
-
-
-  

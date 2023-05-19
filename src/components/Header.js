@@ -1,9 +1,10 @@
 import React from 'react';
-import { login, logout } from '../services/firebase';
+import { loginWithEmailAndPassword, logout } from '../services/firebase';
 import { Link } from 'react-router-dom';
 import '../styles/nav.css';
 
-const Header = (props) => {
+const Header = (props,{ user }) => {
+    
   return (
     <header>
       <nav>
@@ -12,6 +13,7 @@ const Header = (props) => {
         </div>
         <ul className="nav-links">
         <li><Link to="/about">About</Link></li>
+        <li><Link to="/jobs">Jobs</Link></li>
 
             {
                 props.user ?
@@ -23,10 +25,12 @@ const Header = (props) => {
                 <li onClick={logout}>Logout</li>
                 </>
                 :
-                <li onClick={login}>Sign In With Google</li>
+                <li onClick={loginWithEmailAndPassword}>Sign in</li>
             }
         </ul>
+        
       </nav>
+      
     </header>
   );
 }

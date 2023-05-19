@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { auth } from './services/firebase';
 import './App.css';
 import Header from './components/Header';
@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => setUser(user));
-  }, []);
+  }, [])
 
   return (
     <div className="App">

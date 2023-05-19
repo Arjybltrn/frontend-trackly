@@ -17,6 +17,7 @@ const Index = (props) => {
 
     //handleSubmit function for form
     const handleSubmit = (e) => {
+        if (!props.user) return
         e.preventDefault()
         props.createJob(newForm)
         setNewForm({
@@ -42,32 +43,35 @@ const Index = (props) => {
 
   return (
     <section>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={newForm.jobTitle}
-          name="jobTitle"
-          placeholder="job title"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          value={newForm.company}
-          name="company"
-          placeholder="company"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          value={newForm.notes}
-          name="notes"
-          placeholder="notes"
-          onChange={handleChange}
-        />
-        <input type="submit" value="Create Job" />
-      </form>
-
-      {props.job ? loaded() : loading()}
+        {
+            props.user &&
+      
+            <form onSubmit={handleSubmit}>
+            <input
+                type="text"
+                value={newForm.jobTitle}
+                name="jobTitle"
+                placeholder="job title"
+                onChange={handleChange}
+            />
+            <input
+                type="text"
+                value={newForm.company}
+                name="company"
+                placeholder="company"
+                onChange={handleChange}
+            />
+            <input
+                type="text"
+                value={newForm.notes}
+                name="notes"
+                placeholder="notes"
+                onChange={handleChange}
+            />
+            <input type="submit" value="Create Job" />
+            </form>
+        }
+        {props.job ? loaded() : loading()}
   </section>
   )
 }

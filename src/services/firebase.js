@@ -12,6 +12,7 @@ const firebaseConfig = {
 };
 
 
+
 // activate firebase app
 firebase.initializeApp(firebaseConfig)
 
@@ -19,15 +20,29 @@ firebase.initializeApp(firebaseConfig)
 const auth = firebase.auth()
 
 // setup providers
-const provider = new firebase.auth.GoogleAuthProvider()
+const googleProvider = new firebase.auth.GoogleAuthProvider()
+const fbProvider = new firebase.auth.FacebookAuthProvider()
 
 // set up auth functions
-const login = () => {
-    return auth.signInWithPopup(provider)
+const googleLogin = () => {
+    return auth.signInWithPopup(googleProvider)
 }
 
-const logout = () => {
-    return auth.signOut()
+const fbLogin = () => {
+    return auth.signInWithPopup(fbProvider)
 }
 
-export { login, logout, auth }
+const loginWithEmailAndPassword = (email, password) => {
+    return auth.signInWithEmailAndPassword(email, password);
+  };
+
+const logout = async () => {
+    try {
+      await auth.signOut();
+      window.location.href = '/'; // Redirect to landing page after logout
+    } catch (error) {
+      console.log('Logout error:', error);
+    }
+  };
+
+export { googleLogin, fbLogin, loginWithEmailAndPassword, logout, auth }
