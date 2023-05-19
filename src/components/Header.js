@@ -1,7 +1,7 @@
-import React from 'react';
-import { loginWithEmailAndPassword, logout } from '../services/firebase';
-import { Link } from 'react-router-dom';
-import '../styles/nav.css';
+import React from 'react'
+import { fbLogin, googleLogin, logout } from '../services/firebase'
+import { Link } from 'react-router-dom'
+import '../styles/nav.css'
 
 const Header = (props,{ user }) => {
     
@@ -25,7 +25,10 @@ const Header = (props,{ user }) => {
                 <li onClick={logout}>Logout</li>
                 </>
                 :
-                <li onClick={loginWithEmailAndPassword}>Sign in</li>
+                <>
+                <li onClick={ googleLogin }>Sign in with Google</li>
+                <li onClick={ fbLogin }>Sign in with Facebook</li>
+                </>
             }
         </ul>
         

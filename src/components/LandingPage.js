@@ -1,76 +1,80 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { auth } from '../services/firebase';
-import firebase from 'firebase/app';
-import 'firebase/auth';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { auth } from '../services/firebase'
+import firebase from 'firebase/app'
+import 'firebase/auth'
 
 const LandingPage = ({ user }) => {
-  const [isSignUp, setIsSignUp] = useState(false);
-  const [isLogIn, setIsLogIn] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
-  const navigate = useNavigate();
+  const [isSignUp, setIsSignUp] = useState(false)
+  const [isLogIn, setIsLogIn] = useState(false)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState(null)
+  const navigate = useNavigate()
 
   const handleSignUp = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      await auth.createUserWithEmailAndPassword(email, password);
-      setError(null);
+      await auth.createUserWithEmailAndPassword(email, password)
+      setError(null)
     } catch (error) {
-      setError(error.message);
+      setError(error.message)
     }
   };
-
+  // login with email and password
   const handleLogIn = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      await auth.signInWithEmailAndPassword(email, password);
-      setError(null);
-      navigate('/jobs'); // redirect to /jobs after successful login
+      await auth.signInWithEmailAndPassword(email, password)
+      setError(null)
+      navigate('/jobs') // redirect to /jobs after successful login
     } catch (error) {
-      setError(error.message);
+      setError(error.message)
     }
   };
 
-  
+  // connect with google login
   const handleGoogleLogin = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        setError(null);
-        navigate('/jobs'); // Redirect to /jobs after successful login
+        setError(null)
+        navigate('/jobs') // Redirect to /jobs after successful login
       })
       .catch((error) => {
-        setError(error.message);
+        setError(error.message)
       });
   };
   
+  // connect with facebook
   const handleFBLogin = () => {
     const provider = new firebase.auth.FacebookAuthProvider();
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        setError(null);
-        navigate('/jobs'); // Redirect to /jobs after successful login
+        setError(null)
+        navigate('/jobs') // Redirect to /jobs after successful login
       })
       .catch((error) => {
         setError(error.message);
       });
   };
 
+  //toggle button to open sign up form
   const toggleSignUp = () => {
-    setIsSignUp(!isSignUp);
-    setIsLogIn(false);
-    setError(null);
+    setIsSignUp(!isSignUp)
+    setIsLogIn(false)
+    setError(null)
   };
 
+  //toggle button to open log in form
   const toggleLogIn = () => {
-    setIsLogIn(!isLogIn);
-    setIsSignUp(false);
-    setError(null);
+    setIsLogIn(!isLogIn)
+    setIsSignUp(false)
+    setError(null)
   };
+
 
   return (
     <div className="landing-page">
@@ -146,7 +150,7 @@ const LandingPage = ({ user }) => {
       )}
       {error && <p>{error}</p>}
     </div>
-  );
-};
+  )
+}
 
-export default LandingPage;
+export default LandingPage
