@@ -4,6 +4,7 @@ import { Routes, Route, useNavigate } from "react-router-dom"
 import Index from "../pages/Index";
 import Show from "../pages/Show";
 import LandingPage from './LandingPage';
+import About from '../pages/About';
 
 const Main = (props) => {
     
@@ -61,6 +62,7 @@ const Main = (props) => {
     <main>
     <Routes> 
         <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<About /> } />
         <Route exact path="/jobs" element={<Index user={props.user} job={job} createJob={createJob} updateJob={updateJob} deleteJob={deleteJob} /> } />
         <Route path="/jobs/:id"  element={ props.user ? <Show job={job} updateJob={updateJob} deleteJob={deleteJob}/> : navigate("/")  } /> 
     </Routes>
