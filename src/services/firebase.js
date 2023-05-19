@@ -24,8 +24,13 @@ const googleProvider = new firebase.auth.GoogleAuthProvider()
 const fbProvider = new firebase.auth.FacebookAuthProvider()
 
 // set up auth functions
-const googleLogin = () => {
-    return auth.signInWithPopup(googleProvider)
+const googleLogin = async () => {
+  try {
+    await auth.signInWithPopup(googleProvider)
+    window.location.href = "/jobs"
+  } catch (error) {
+    console.log('Login error:', error)
+  }
 }
 
 const fbLogin = () => {
