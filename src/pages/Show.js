@@ -8,7 +8,6 @@ const Show = (props) => {
   const posting = job.find((p) => p._id === id)
 
   const [ editForm, setEditForm ] = useState(posting)
-
   const [ isEditing, setisEditing ] = useState(false) 
   
   useEffect(() => {

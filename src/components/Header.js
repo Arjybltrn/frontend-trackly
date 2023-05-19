@@ -26,8 +26,8 @@ const Header = (props,{ user }) => {
                 </>
                 :
                 <>
-                <li onClick={ googleLogin }>Sign in with Google</li>
-                <li onClick={ fbLogin }>Sign in with Facebook</li>
+                  <li onClick={ googleLogin }>Sign in with Google</li>
+                  <li onClick={ fbLogin }>Sign in with Facebook</li>
                 </>
             }
         </ul>
