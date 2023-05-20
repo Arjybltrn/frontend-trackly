@@ -100,7 +100,9 @@ const Show = (props) => {
               onChange={handleChange}
             />
         </div>
-        <input type="submit" value="Update Job" />
+        <button type="submit" value="Update Job" className="show-update-button" >
+          <img className="show-update" src="https://cdn-icons-png.flaticon.com/128/10371/10371913.png" />
+        </button>
       </form>
       </div>
     }
