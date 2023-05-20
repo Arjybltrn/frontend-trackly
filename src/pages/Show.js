@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import '../styles/show.css'
 
 const Show = (props) => {
   const { id } = useParams();
@@ -37,54 +38,74 @@ const Show = (props) => {
 
   const loaded = () => {
     return (
-      <>
-        <h1>{posting.jobTitle}</h1>
-        <h2>{posting.company}</h2>
-        <h2>{posting.notes}</h2>
-        <button onClick={handleEdit}> { isEditing ? 'Cancel Edit' : 'Edit'}</button>
-        <button onClick={removeJob}>Delete</button>
-      </>
-    );
-  };
+      <div className="show-card">
+          <h1>{posting.jobTitle}</h1>
+          <h2>{posting.company}</h2>
+          <h2>{posting.notes}</h2>
+        <div className="controls show-controls">
+  <button onClick={handleEdit} className="edit-show-button">
+    {isEditing ? (
+      <img className='cancel-gear-show' src='https://cdn-icons-png.flaticon.com/128/1276/1276453.png' alt='Gear Icon' />
+    ) : (
+      <img className='gear-show' src='https://cdn-icons-png.flaticon.com/128/10686/10686053.png' alt='Gear Icon' />
+    )}
+  </button>
+
+  <button onClick={removeJob} className="delete-show-button">
+    <img className='delete-show-icon' src='https://cdn-icons-png.flaticon.com/128/10229/10229227.png' alt='Delete Icon' />
+  </button>
+</div>
+      </div>
+    )
+  }
   const loading = () => {
     return <h1>Loading ...</h1>;
   };
 
   return (
-    <div className="posting">
+    <div className="posting-show box2">
       { posting ? loaded() : loading() }
 
       { isEditing && 
-      <div className="create-form">
+      <div className="update-form">
+         
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={editForm.jobTitle}
-          name="jobTitle"
-          placeholder="job title"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          value={editForm.company}
-          name="company"
-          placeholder="company"
-          onChange={handleChange}
-        />
-        <input
-          type="text"
-          value={editForm.notes}
-          name="notes"
-          placeholder="notes"
-          onChange={handleChange}
-        />
+      <div className="form-field">
+          <label className="form-label">Job Title:</label>
+            <input
+              type="text"
+              value={editForm.jobTitle}
+              name="jobTitle"
+              placeholder="job title"
+              onChange={handleChange}
+            />
+        </div>
+      <div className="form-field">
+          <label className="form-label">Company:</label>
+            <input
+              type="text"
+              value={editForm.company}
+              name="company"
+              placeholder="company"
+              onChange={handleChange}
+            />
+        </div>
+        <div className="form-field">
+          <label className="form-label">Notes:</label>
+            <textarea
+              type="text"
+              value={editForm.notes}
+              name="notes"
+              placeholder="notes"
+              onChange={handleChange}
+            />
+        </div>
         <input type="submit" value="Update Job" />
       </form>
       </div>
     }
-
     </div>
-  );
-};
+  )
+}
 
 export default Show;

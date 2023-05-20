@@ -37,10 +37,7 @@
     font-family: monospace;
   }
 
-
- 
-
-/* sketchy border */
+/* sketchy border (card) */
   .card-posting {
     grid-column: 1 / 2;
     border-top-left-radius: 37px 140px;
@@ -60,6 +57,7 @@
     box-shadow: 3px 15px 8px -10px rgba(0, 0, 0, 0.3);
     transition: all 0.13s ease-in;
     text-align: left;
+    word-wrap: normal;
     color: rgb(147,133,104);
   }
 
@@ -96,75 +94,12 @@
     font-size: 15px;
     position: absolute;
   }
-  
-  .tl {
-    position: absolute;
-    left: -50px;
-    top: -63px;
-    font-weight: 600;
-  }
-  
-  .tl:before {
-    left: 120px;
-    top: 30px;
-  }
-  
-  .tl:after {
-    left: 0px;
-    top: 80px;
-  }
-  
-  .tr {
-    right: -50px;
-    top: -63px;
-    font-weight: 600;
-  }
-  
-  .tr:before {
-    left: 0;
-    top: 30px;
-  }
-  
-  .tr:after {
-    left: 130px;
-    top: 80px;
-  }
-  
-  .bl {
-    left: -50px;
-    bottom: -71px;
-    font-weight: 600;
-  }
-  
-  .bl:before {
-    left: 120px;
-    top: -30px;
-  }
-  
-  .bl:after {
-    left: 0px;
-    top: -90px;
-  }
-  
-  .br {
-    right: -50px;
-    bottom: -63px;
-    font-weight: 600;
-  }
-  
-  .br:before {
-    left: 0;
-    top: -30px;
-  }
-  
-  .br:after {
-    content: "24px";
-    right: -10px;
-    top: -80px;
-  }
+
+ 
+ 
   
   
-  /*double sketchy border */
+  /*double sketchy border (cards)*/
 
 
   .cards {
@@ -228,10 +163,6 @@ h1 {
     box-shadow:3px 3px 0 #222;
   }
 
-.gear {
-    width: 20px;
-    height: 20px;
-}
 
 .delete-button {
     position: relative;
@@ -246,9 +177,8 @@ h1 {
     top: 0;
     right: 0;
     display: inline-block;
-    width: 15px; /* Adjust the width and height as needed */
+    width: 15px;
     height: 15px;
-    background-image: url('https://cdn-icons-png.flaticon.com/128/4338/4338830.png');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -256,7 +186,12 @@ h1 {
 .posting {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+}
+
+.job-title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 h3 {
     grid-column: 1 / 2;
@@ -283,7 +218,7 @@ h4 {
   }
   
   .icon-link {
-    left: 60px;
+    left: 100px;
   }
   
   .delete-button {
@@ -292,32 +227,16 @@ h4 {
   
   .gear,
   .delete-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .delete-icon {
     width: 25px;
-    height:25px;
+    height: 25px;
   }
+
   
 
-  .gear:hover {
+  .gear:hover, .delete-icon:hover {
     animation: spin 2s linear infinite;
   }
   
-  @keyframes spin {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  .delete-icon:hover {
-    animation: spin 2s linear infinite;
-  }
   @keyframes spin {
     0% {
       transform: rotate(0);
