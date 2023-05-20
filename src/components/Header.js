@@ -9,7 +9,10 @@ const Header = (props,{ user }) => {
     <header>
       <nav>
         <div className="logo">
-          <img src="" alt="Logo" />
+          <ul className="nav-links">
+          <li><img src="https://cdn-icons-png.flaticon.com/128/10849/10849305.png" alt="Logo" /></li>
+          <li><h1>Taskly</h1></li>
+          </ul>
         </div>
         <ul className="nav-links">
         <li><Link to="/about">About</Link></li>
