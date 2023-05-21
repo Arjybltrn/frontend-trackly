@@ -39,9 +39,9 @@ const Show = (props) => {
   const loaded = () => {
     return (
       <div className="show-card">
-          <h1>{posting.jobTitle}</h1>
-          <h2>{posting.company}</h2>
-          <h2>{posting.notes}</h2>
+          <h1 className="show-jobtitle">{posting.jobTitle}</h1>
+          <h2 className="show-company">{posting.company}</h2>
+          <h2 className="show-notes">{posting.notes}</h2>
         <div className="controls show-controls">
   <button onClick={handleEdit} className="edit-show-button">
     {isEditing ? (
@@ -101,7 +101,7 @@ const Show = (props) => {
             />
         </div>
         <button type="submit" value="Update Job" className="show-update-button" >
-          <img className="show-update" src="https://cdn-icons-png.flaticon.com/128/10371/10371913.png" />
+          <img className="show-update" src="https://cdn-icons-png.flaticon.com/128/10371/10371913.png" alt="Update" />
         </button>
       </form>
       </div>

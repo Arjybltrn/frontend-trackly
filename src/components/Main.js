@@ -12,6 +12,7 @@ const Main = (props) => {
     const url = "http://localhost:4000/jobs/"
     const navigate = useNavigate()
 
+
     const getJob = async () => {
         const response = await fetch(url)
         const data = await response.json()

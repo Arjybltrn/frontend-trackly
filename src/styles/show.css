@@ -28,25 +28,24 @@ h2 {
 }
 
 .show-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-top: 20px;
+    margin-right: 10px;
   }
   
 .edit-show-button,
 .delete-show-button, .show-update-button {
     background: none;
     border: none;
-    padding: 0;
+    padding-right: 40px;
+    margin-left: 20px;
     cursor: pointer;
   }
   
 .cancel-gear-show,
 .gear-show,
 .delete-show-icon, .show-update {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
   }
 
@@ -88,7 +87,56 @@ h2 {
 
 
 
+.show-card {
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 50px;
+    align-items: center;
+}
 
+
+
+.show-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 120px 30px 1fr;
+}
+
+.show-jobtitle {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  font-size: 40px;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.show-company {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.show-notes {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  font-size: 12px;
+  text-align: left;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+
+div.controls.show-controls {
+  margin-top: 40px;
+  margin-left: 90px;
+}
 
 
 

@@ -186,7 +186,7 @@ h1 {
 .posting {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 20px 20px 1fr;
 }
 
 .job-title {
@@ -196,11 +196,13 @@ h1 {
 h3 {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
+    height: 10px;
 }
 
 h4 {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    margin-top: 10px;
 }
 
 .set-icons {
@@ -244,4 +246,24 @@ h4 {
     100% {
       transform: rotate(360deg);
     }
+  }
+
+
+  h3 {
+    color: rgb(77,77,77);
+  }
+
+
+  .apply-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .apply-checkbox input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .apply-checkbox span {
+    font-size: 14px;
   }
