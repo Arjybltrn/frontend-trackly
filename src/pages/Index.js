@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import useLocalStorage from '../components/useLocalStorage'
 import '../styles/index.css'
@@ -11,6 +11,7 @@ const Index = (props) => {
   });
 
   const [checkedJobs, setCheckedJobs] = useLocalStorage('checkedJobs', {})
+  const [rejectedJobs, setRejectedJobs] = useLocalStorage('rejectedJobs', {})
 
   const handleChange = (e) => {
     setNewForm({ ...newForm, [e.target.name]: e.target.value })
@@ -31,11 +32,36 @@ const Index = (props) => {
   };
 
   const handleCheckboxChange = (event, jobId) => {
-    const { checked } = event.target;
-    setCheckedJobs((prevCheckedJobs) => {
-      return { ...prevCheckedJobs, [jobId]: checked };
-    });
+    const { name, checked } = event.target;
+    
+    if (name.includes('job-application')) {
+      setCheckedJobs((prevCheckedJobs) => {
+        return { ...prevCheckedJobs, [jobId]: checked };
+      });
+    } else if (name.includes('job-rejected')) {
+      setRejectedJobs((prevRejectedJobs) => {
+        return { ...prevRejectedJobs, [jobId]: checked };
+      });
+    }
   };
+
+  useEffect(() => {
+    const savedCheckedJobs = JSON.parse(localStorage.getItem('checkedJobs')) || {};
+    setCheckedJobs(savedCheckedJobs);
+  }, [setCheckedJobs]);
+
+  useEffect(() => {
+    localStorage.setItem('checkedJobs', JSON.stringify(checkedJobs));
+  }, [checkedJobs]);
+
+  useEffect(() => {
+    const savedRejectedJobs = JSON.parse(localStorage.getItem('rejectedJobs')) || {};
+    setRejectedJobs(savedRejectedJobs);
+  }, [setRejectedJobs]);
+
+  useEffect(() => {
+    localStorage.setItem('rejectedJobs', JSON.stringify(rejectedJobs));
+  }, [rejectedJobs]);
 
   const loaded = () => {
     return props.job.map((posting) => (
@@ -54,7 +80,7 @@ const Index = (props) => {
               <img className='delete-icon' src='https://cdn-icons-png.flaticon.com/128/10229/10229227.png' alt='Delete Icon' />
             </button>
           </div>
-          <div>
+          <div className='checkbox'>
             <label className="apply-checkbox">
               <input
                 type="checkbox"
@@ -62,8 +88,18 @@ const Index = (props) => {
                 checked={checkedJobs[posting._id]}
                 onChange={(event) => handleCheckboxChange(event, posting._id)}
               />
-              <span>Applied</span>
+              <span>Interviewed</span>
             </label>
+
+            <label className="rejected-checkbox">
+              <input
+                type="checkbox"
+                name={`job-rejected_${posting._id}`}
+                checked={rejectedJobs[posting._id]}
+                onChange={(event) => handleCheckboxChange(event, posting._id)}
+              />
+              <span>Rejected</span>
+            </label>                 
           </div>
         </div>
       </div>

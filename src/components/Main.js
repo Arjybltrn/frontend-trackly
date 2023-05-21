@@ -8,11 +8,13 @@ import About from '../pages/About';
 
 const Main = (props) => {
     
-    const [ job, setJob ] = useState(null)
-    const url = "http://localhost:4000/jobs/"
     const navigate = useNavigate()
 
-
+    const [ job, setJob ] = useState(null)
+    
+    const url = "http://localhost:4000/jobs/"
+    
+    //getJob fn
     const getJob = async () => {
         const response = await fetch(url)
         const data = await response.json()
@@ -20,7 +22,7 @@ const Main = (props) => {
         setJob(data)
     }
     
-    
+    //createJob fn
     const createJob = async (posting) => {
         if (!props.user) return
         console.log('posting', posting)
@@ -35,7 +37,7 @@ const Main = (props) => {
         getJob()
     }
 
-
+    //updateJob fn
     const updateJob = async (posting, id) => {
         if (!props.user) return
         await fetch (url + id, {
@@ -47,7 +49,7 @@ const Main = (props) => {
         })
         getJob()
     }
-
+    // delteJob fn
     const deleteJob = async (id) => {
         if (!props.user) return
         await fetch(url + id, {
@@ -62,7 +64,7 @@ const Main = (props) => {
     return (
     <main>
     <Routes> 
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<LandingPage />} /> 
         <Route path="/about" element={<About /> } />
         <Route exact path="/jobs" element={<Index user={props.user} job={job} createJob={createJob} updateJob={updateJob} deleteJob={deleteJob} /> } />
         <Route path="/jobs/:id"  element={ props.user ? <Show job={job} updateJob={updateJob} deleteJob={deleteJob}/> : navigate("/")  } /> 

@@ -187,6 +187,7 @@ h1 {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 20px 20px 1fr;
+    position: relative; 
 }
 
 .job-title {
@@ -254,16 +255,27 @@ h4 {
   }
 
 
-  .apply-checkbox {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
+
   
-  .apply-checkbox input[type="checkbox"] {
+  .apply-checkbox input[type="checkbox"], .rejected-checkbox input[type="checkbox"] {
     margin-right: 5px;
   }
   
   .apply-checkbox span {
     font-size: 14px;
   }
+
+  .apply-checkbox, .rejected-checkbox {
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+  }
+
+  .rejected-checkbox {
+    position: absolute; 
+    bottom: 20px; 
+    right: 0; 
+  }
+
+
+  
