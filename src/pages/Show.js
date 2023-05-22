@@ -68,42 +68,41 @@ const Show = (props) => {
 
       { isEditing && 
       <div className="update-form">
-         
-      <form onSubmit={handleSubmit}>
-      <div className="form-field">
-            <input
-              className="form-input"
-              type="text"
-              value={editForm.jobTitle}
-              name="jobTitle"
-              placeholder="job title"
-              onChange={handleChange}
-            />
-        </div>
-      <div className="form-field">
-            <input
-              className="form-input"
-              type="text"
-              value={editForm.company}
-              name="company"
-              placeholder="company"
-              onChange={handleChange}
-            />
-        </div>
-        <div className="form-field">
-            <textarea
-              className="form-input"
-              type="text"
-              value={editForm.notes}
-              name="notes"
-              placeholder="notes"
-              onChange={handleChange}
-            />
-        </div>
-        <button type="submit" value="Update Job" className="show-update-button" >
-          <img className="show-update" src="https://cdn-icons-png.flaticon.com/128/10371/10371913.png" alt="Update" />
-        </button>
-      </form>
+          <form onSubmit={handleSubmit}>
+          <div className="form-field">
+                <input
+                  className="form-input"
+                  type="text"
+                  value={editForm.jobTitle}
+                  name="jobTitle"
+                  placeholder="job title"
+                  onChange={handleChange}
+                />
+            </div>
+          <div className="form-field">
+                <input
+                  className="form-input"
+                  type="text"
+                  value={editForm.company}
+                  name="company"
+                  placeholder="company"
+                  onChange={handleChange}
+                />
+            </div>
+            <div className="form-field">
+                <textarea
+                  className="form-input"
+                  type="textarea"
+                  defaultValue={editForm.notes}
+                  name="notes"
+                  placeholder="notes"
+                  onChange={handleChange}
+                />
+            </div>
+                <button type="submit" value="Update Job" className="show-update-button" >
+                  <img className="show-update" src="https://cdn-icons-png.flaticon.com/128/10371/10371913.png" alt="Update" />
+                </button>
+            </form>
       </div>
     }
     </div>

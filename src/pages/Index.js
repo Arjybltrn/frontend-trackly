@@ -138,11 +138,11 @@ const Index = (props) => {
                 />
               </div>
               <div className="form-field-index">
-                <textarea
+              <textarea
                   type="textarea"
                   value={newForm.notes}
                   name="notes"
-                  placeholder="Notes"
+                  placeholder="notes"
                   onChange={handleChange}
                   className="form-input"
                 />
