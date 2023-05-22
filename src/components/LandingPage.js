@@ -156,7 +156,7 @@ const LandingPage = ({ user }) => {
           {/* facebook login button */}
           <button className="facebook-button"onClick={handleFBLogin}>
             <img className="facebook-logo" src="https://assets.website-files.com/632c941ea9199f8985f3fd52/632c960d4839cf20aeafcad2_facebook.svg" alt=""/>
-            <span className="text">Continue with Google</span>
+            <span className="text">Continue with Facebook</span>
           </button>
 
         </div>
