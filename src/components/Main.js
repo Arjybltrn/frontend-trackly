@@ -13,7 +13,7 @@ const Main = (props) => {
     const [ job, setJob ] = useState(null)
     
     // const url = "http://localhost:4000/jobs/"
-    const url = "https://taskly-server.onrender.com/jobs/"
+    const url = "https://taskly-d2ep.onrender.com/jobs/"
     
     //getJob fn
     const getJob = async () => {

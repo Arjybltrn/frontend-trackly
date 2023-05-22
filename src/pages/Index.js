@@ -24,44 +24,44 @@ const Index = (props) => {
       jobTitle: '',
       company: '',
       notes: '',
-    });
-  };
+    })
+  }
 
   const handleDelete = (id) => {
-    props.deleteJob(id);
-  };
+    props.deleteJob(id)
+  }
 
   const handleCheckboxChange = (event, jobId) => {
-    const { name, checked } = event.target;
+    const { name, checked } = event.target
     
     if (name.includes('job-application')) {
       setCheckedJobs((prevCheckedJobs) => {
-        return { ...prevCheckedJobs, [jobId]: checked };
-      });
+        return { ...prevCheckedJobs, [jobId]: checked }
+      })
     } else if (name.includes('job-rejected')) {
       setRejectedJobs((prevRejectedJobs) => {
-        return { ...prevRejectedJobs, [jobId]: checked };
-      });
+        return { ...prevRejectedJobs, [jobId]: checked }
+      })
     }
-  };
+  }
 
   useEffect(() => {
-    const savedCheckedJobs = JSON.parse(localStorage.getItem('checkedJobs')) || {};
+    const savedCheckedJobs = JSON.parse(localStorage.getItem('checkedJobs')) || {}
     setCheckedJobs(savedCheckedJobs);
-  }, [setCheckedJobs]);
+  }, [setCheckedJobs])
 
   useEffect(() => {
-    localStorage.setItem('checkedJobs', JSON.stringify(checkedJobs));
-  }, [checkedJobs]);
+    localStorage.setItem('checkedJobs', JSON.stringify(checkedJobs))
+  }, [checkedJobs])
 
   useEffect(() => {
-    const savedRejectedJobs = JSON.parse(localStorage.getItem('rejectedJobs')) || {};
+    const savedRejectedJobs = JSON.parse(localStorage.getItem('rejectedJobs')) || {}
     setRejectedJobs(savedRejectedJobs);
-  }, [setRejectedJobs]);
+  }, [setRejectedJobs])
 
   useEffect(() => {
-    localStorage.setItem('rejectedJobs', JSON.stringify(rejectedJobs));
-  }, [rejectedJobs]);
+    localStorage.setItem('rejectedJobs', JSON.stringify(rejectedJobs))
+  }, [rejectedJobs])
 
   const loaded = () => {
     return props.job.map((posting) => (
@@ -69,7 +69,7 @@ const Index = (props) => {
         <div className="posting">
           <h1 className='job-title'>{posting.jobTitle}</h1>
           <h3 className='company'>{posting.company}</h3>
-          <h4 className='notes'>{posting.notes}</h4>
+          {/* <h4 className='notes'>{posting.notes}</h4> */}
 
           <div className='set-icons'>
             <Link to={`/jobs/${posting._id}`} className='icon-link'>
@@ -104,12 +104,12 @@ const Index = (props) => {
         </div>
       </div>
       
-    ));
-  };
+    ))
+  }
 
   const loading = () => {
     return <h1>Loading...</h1>
-  };
+  }
 
   return (
     <div className='index-content'>
@@ -137,7 +137,7 @@ const Index = (props) => {
                   className="form-input"
                 />
               </div>
-              <div className="form-field-index">
+              {/* <div className="form-field-index">
               <textarea
                   type="textarea"
                   value={newForm.notes}
@@ -146,7 +146,7 @@ const Index = (props) => {
                   onChange={handleChange}
                   className="form-input"
                 />
-              </div>
+              </div> */}
               <button className='create-button' type="submit">CREATE</button>
             </form>
           </div>

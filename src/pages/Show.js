@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useState, useEffect } from "react"
+import { useNavigate, useParams } from "react-router-dom"
 import '../styles/show.css'
 
 const Show = (props) => {
@@ -18,18 +18,18 @@ const Show = (props) => {
   }, [posting])
 
   const handleChange = (event) => {
-    setEditForm({ ...editForm, [event.target.name]: event.target.value });
+    setEditForm({ ...editForm, [event.target.name]: event.target.value })
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    props.updateJob(editForm, posting._id);
-    navigate("/jobs");
+    event.preventDefault()
+    props.updateJob(editForm, posting._id)
+    navigate("/jobs")
   }
 
   const removeJob = () => {
-    props.deleteJob(posting._id);
-    navigate("/jobs");
+    props.deleteJob(posting._id)
+    navigate("/jobs")
   }
 
   const handleEdit = () => {
@@ -59,7 +59,7 @@ const Show = (props) => {
     )
   }
   const loading = () => {
-    return <h1>Loading ...</h1>;
+    return <h1>Loading ...</h1>
   };
 
   return (
@@ -89,7 +89,7 @@ const Show = (props) => {
                   onChange={handleChange}
                 />
             </div>
-            <div className="form-field">
+            {/* <div className="form-field">
                 <textarea
                   className="form-input"
                   type="textarea"
@@ -97,8 +97,8 @@ const Show = (props) => {
                   name="notes"
                   placeholder="notes"
                   onChange={handleChange}
-                />
-            </div>
+                  />
+            </div> */}
                 <button type="submit" value="Update Job" className="show-update-button" >
                   <img className="show-update" src="https://cdn-icons-png.flaticon.com/128/10371/10371913.png" alt="Update" />
                 </button>
@@ -109,4 +109,4 @@ const Show = (props) => {
   )
 }
 
-export default Show;
+export default Show
