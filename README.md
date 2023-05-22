@@ -2,6 +2,8 @@
 
 Taskly is a job management application that allows you to keep track of your job applications. You can create, update, and delete job postings.
 
+Check the website here:
+Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank"><span style="font-family:Source Code Pro">Taskly</span></a>
 
 <details>
 <summary> Table of contents</summary>
@@ -84,4 +86,4 @@ Taskly is a job management application that allows you to keep track of your job
 - PUT /jobs/:id - Update a job by ID.
 - DELETE /jobs/:id - Delete a job by ID.
 
-WEBSITE: https://legendary-halva-8abb3f.netlify.app/
+
