@@ -21,7 +21,7 @@ const Header = (props,{ user }) => {
             {
                 props.user ?
                 <>
-                    <li> <span>Welcome, {props.user.displayName} </span></li>
+                    <li> <p>Welcome, {props.user.displayName} </p></li>
                     <li>
                         <img className='profilePhoto' src={props.user.photoURL} alt = {props.user.displayName} />
                     </li>

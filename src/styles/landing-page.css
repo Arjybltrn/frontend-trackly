@@ -11,9 +11,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: lightgray;
-    padding: 20px;
+    background: linear-gradient(to right, #190e12 0%,#303647 100%);
+    border: black grey .5px;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px;
   }
+
+
+  
   
   .toggle-buttons {
     margin-bottom: 10px;
@@ -54,7 +60,6 @@
     flex-basis: 80%;
     max-height: 100%;
     max-width: 100%;
-    background: linear-gradient(to right, #575153 0%,#232d4a 100%); 
     background-size: cover;
     background-position: center;
   }
@@ -95,4 +100,17 @@
 
   .facebook-logo {
     width: 25px;
+  }
+
+  .slogan {
+    font-size: 100px;
+    margin: 240px;
+  }
+
+  .App {
+    background: linear-gradient(to right, #575153 0%,#232d4a 100%); 
+  }
+
+  span {
+    color: white;
   }

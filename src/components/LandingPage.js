@@ -82,13 +82,15 @@ const LandingPage = ({ user }) => {
           {!user && (
             <div>
               <span>Don't have an account?</span>
-              <button className='signup-button' onClick={toggleSignUp}> Sign Up</button>
+              <button className='signup-button' onClick={toggleSignUp}>Sign Up</button>
             </div>
           )}
           {!user && (
+            
+
             <div>
               <span>Already have an account?</span>
-              <button className='login-button' onClick={toggleLogIn}> Log In</button>
+              <button className='signup-button' onClick={toggleLogIn}>Log In</button>
             </div>
           )}
         </div>
@@ -161,6 +163,7 @@ const LandingPage = ({ user }) => {
       </div>
 
       <div className="photo-section">
+        <h1 className='slogan'>Organize Your Job Journey</h1>
       </div>
     </div>
   );
