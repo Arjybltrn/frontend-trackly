@@ -1,9 +1,9 @@
-# Taskly
+# Trackly
 
-Taskly is a job management application that allows you to keep track of your job applications. You can create, update, and delete job postings.
+Trackly is a job management application that allows you to keep track of your job applications. You can create, update, and delete job postings.
 
 Check the website here:
-Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank"><span style="font-family:Source Code Pro">Taskly</span></a>
+Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank"><span style="font-family:Source Code Pro">Trackly</span></a>
 
 <details>
 <summary> Table of contents</summary>
@@ -24,31 +24,14 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 
 ## Technologies Used
 
-
-### Frontend
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=react,css,html,sass, perline=3" />
+    <img src="https://skillicons.dev/icons?i=react,css,html,sass,nodejs,express,mongodb,netlify,perline=3" />
   </a>
 </p>
 
 
-### Backend
 
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb, perline=3" />
-  </a>
-</p>
-
-
-### Front End Deployment
-<p align="center">
-
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=render,netlify, perline=3" /> 
-</a>
-</p>
 
 ### Backend Deployment
 <p align="center">
@@ -59,11 +42,11 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 
 ## Screenshots
 
-<img src="src/md_imgs/Landing%20Page.png" width="700" height="381" alt="main page screenshot" />
-<img src="src/md_imgs/Index.png" width="700" height="381" alt="main page screenshot" />
-<img src="src/md_imgs/Show.png" width="700" height="381" alt="main page screenshot" />
-<img src="src/md_imgs/ShowUpdate.png" width="700" height="381" alt="main page screenshot" />
+<img src="src/md_imgs/landing.png" width="700" height="381" alt="landing" />
+<img src="src/md_imgs/index.png" width="700" height="381" alt="index" />
+
   
+
 ## Installation
 
 1. Clone the repository:
@@ -73,7 +56,7 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 2. Navigate to the project directory:
 
    ```shell
-   cd taskly
+   cd trackly
 3. Install dependencies:
 
    ```shell
@@ -85,3 +68,29 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 - DELETE /jobs/:id - Delete a job by ID.
 
 
+
+
+<div align="right">
+    <a href="#top">🔝</a>
+</div>
+
+---
+
+## Stay in touch
+[![LinkedIn][linkedin-img]][linkedin-url]<br>
+[![GitHub][github-img]][github-url]<br>
+
+
+
+<div align="right">
+    <a href="#top">🔝</a>
+</div>
+
+
+[github-img]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+
+[github-url]: https://github.com/Arjybltrn
+
+[linkedin-img]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+
+[linkedin-url]: https://www.linkedin.com/in/arjaybeltran/
