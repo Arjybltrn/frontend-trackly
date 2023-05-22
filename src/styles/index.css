@@ -8,7 +8,7 @@
     grid-column: 2 / 3;
     grid-row: -3 / -1;
     width: 90%;
-    height: 400px;
+    height: 320px;
     margin: 0 auto;
     border-radius: 5px;
     margin-top: 50px;
@@ -202,7 +202,7 @@ h1 {
 .posting {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 20px 20px 1fr;
+    grid-template-rows: 50px 20px 1fr;
     position: relative; 
 }
 
@@ -276,7 +276,7 @@ h4, .notes {
 
   
   .apply-checkbox input[type="checkbox"], .rejected-checkbox input[type="checkbox"] {
-    margin-right: 5px;
+    margin-right: 5px;  
   }
   
   .apply-checkbox span {
