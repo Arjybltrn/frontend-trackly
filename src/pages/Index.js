@@ -147,7 +147,7 @@ const Index = (props) => {
                   className="form-input"
                 />
               </div>
-              <button type="submit">Create Job</button>
+              <button className='create-button' type="submit">CREATE</button>
             </form>
           </div>
           <div className='lottie-index'>

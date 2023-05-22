@@ -1,0 +1,15 @@
+.p:hover {
+    color:beige;
+}
+
+p {
+    color: darkgrey;
+}
+
+.slogan {
+    font-size: 40px;
+  }
+
+.about {
+    margin-top: 200px;
+}

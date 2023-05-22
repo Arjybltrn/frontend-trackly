@@ -24,14 +24,12 @@
     padding: 10px;
   }
   
-  .form-label {
-    width: 100px;
-     
-  }
+  .create-button {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bolder;
+  } 
+
   
-  .form-input {
-    flex: 1; 
-  }
   body {
     font-family: monospace;
     background: linear-gradient(to right, #575153 0%,#232d4a 100%); 
@@ -135,12 +133,12 @@
   background:linear-gradient(to left, #575153 0%,#232d4a 100% )
 }
 
-.form-input{
+.form-input {
+  flex: 1;
   height: 46px;
   padding: 0 16px;
-  border: 2px solid #ddd;
+  border: 2px solid rgb(110,116,145);;
   border-radius: 4px;
-  font-family: 'Rubik';
   outline: 0;
   transition: .2s;
   margin-top: 20px;
@@ -223,6 +221,7 @@ h4, .notes {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     margin-top: 10px;
+    padding-top: 10px;
 }
 
 .set-icons {

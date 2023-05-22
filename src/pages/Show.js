@@ -71,8 +71,8 @@ const Show = (props) => {
          
       <form onSubmit={handleSubmit}>
       <div className="form-field">
-          <label className="form-label">Job Title:</label>
             <input
+              className="form-input"
               type="text"
               value={editForm.jobTitle}
               name="jobTitle"
@@ -81,8 +81,8 @@ const Show = (props) => {
             />
         </div>
       <div className="form-field">
-          <label className="form-label">Company:</label>
             <input
+              className="form-input"
               type="text"
               value={editForm.company}
               name="company"
@@ -91,8 +91,8 @@ const Show = (props) => {
             />
         </div>
         <div className="form-field">
-          <label className="form-label">Notes:</label>
             <textarea
+              className="form-input"
               type="text"
               value={editForm.notes}
               name="notes"
