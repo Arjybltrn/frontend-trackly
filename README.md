@@ -56,16 +56,14 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 ![Render](https://img.shields.io/badge/Render-%46E3B7.svg?style=for-the-badge&logo=render&logoColor=white)
 
 </p>
+
+## Screenshots
+
+<img src="src/md_imgs/Landing%20Page.png" width="700" height="381" alt="main page screenshot" />
+<img src="src/md_imgs/Index.png" width="700" height="381" alt="main page screenshot" />
+<img src="src/md_imgs/Show.png" width="700" height="381" alt="main page screenshot" />
+<img src="src/md_imgs/ShowUpdate.png" width="700" height="381" alt="main page screenshot" />
   
-
-
-
-
-
-- Frontend: React, React Router, HTML, CSS
-- Backend: Node.js, Express.js, MongoDB
-- Deployment: Render / Netlify
-
 ## Installation
 
 1. Clone the repository:
