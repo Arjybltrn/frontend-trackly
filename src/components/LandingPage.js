@@ -163,7 +163,7 @@ const LandingPage = ({ user }) => {
       </div>
 
       <div className="photo-section">
-        <h1 className='slogan'>Organize Your Job Journey</h1>
+        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_52ebqe6w.json" background="transparent"  speed="1" loop autoplay></lottie-player>
       </div>
     </div>
   );

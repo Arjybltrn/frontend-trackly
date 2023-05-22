@@ -8,21 +8,20 @@
     grid-column: 2 / 3;
     grid-row: -3 / -1;
     width: 90%;
-    height: 350px;
+    height: 400px;
     margin: 0 auto;
-    border: 1px solid black;
     border-radius: 5px;
     margin-top: 50px;
     margin-right: 100px;
     padding-top: 30px;
   }
 
-  .form-field {
+  .form-field-index {
     display: flex;
     align-items: center;
     margin-right:10px;
     margin-bottom: 10px;
-    padding: 20px;
+    padding: 10px;
   }
   
   .form-label {
@@ -35,6 +34,8 @@
   }
   body {
     font-family: monospace;
+    background: linear-gradient(to right, #575153 0%,#232d4a 100%); 
+
   }
 
 /* sketchy border (card) */
@@ -62,7 +63,7 @@
   }
 
   .job-title {
-    color: rgb(86,103,119);
+    color: beige;
   }
 
   .job-title {
@@ -95,9 +96,6 @@
     position: absolute;
   }
 
- 
- 
-  
   
   /*double sketchy border (cards)*/
 
@@ -129,13 +127,33 @@
     }
 }
 
+.cards {
+  background: linear-gradient(to right, #575153 0%,#232d4a 100%); 
+}
+
+.create-form.box3 {
+  background:linear-gradient(to left, #575153 0%,#232d4a 100% )
+}
+
+.form-input{
+  height: 46px;
+  padding: 0 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Rubik', sans-serif;
+  outline: 0;
+  transition: .2s;
+  margin-top: 20px;
+  background:linear-gradient(to left, #575153 0%,#232d4a 100% )
+}
+
 h1 {
     text-transform: uppercase;
 }
 
 
 .create-form {
-    background:#fff;
+    background: grey;
     border: solid rgb(110,116,145);
     border-color: rgb(110,116,145);
     float:left; 
@@ -194,13 +212,14 @@ h1 {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
 }
-h3 {
+h3, .company {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
     height: 10px;
+    color: whitesmoke;
 }
 
-h4 {
+h4, .notes {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     margin-top: 10px;
@@ -278,4 +297,9 @@ h4 {
   }
 
 
-  
+  .lottie-index {
+    grid-column: 2 / 3;
+    grid-row: -3 / -1;
+    margin-top: 100px;
+    height: 400px;
+  }

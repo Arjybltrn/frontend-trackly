@@ -68,8 +68,8 @@ const Index = (props) => {
       <div className='card-posting' key={posting._id}>
         <div className="posting">
           <h1 className='job-title'>{posting.jobTitle}</h1>
-          <h3>{posting.company}</h3>
-          <h4>{posting.notes}</h4>
+          <h3 className='company'>{posting.company}</h3>
+          <h4 className='notes'>{posting.notes}</h4>
 
           <div className='set-icons'>
             <Link to={`/jobs/${posting._id}`} className='icon-link'>
@@ -103,6 +103,7 @@ const Index = (props) => {
           </div>
         </div>
       </div>
+      
     ));
   };
 
@@ -116,8 +117,7 @@ const Index = (props) => {
         <div className='create-form box3'>
           <div className="oddboxinner">
             <form onSubmit={handleSubmit}>
-              <div className="form-field">
-                <label className="form-label">Job Title:</label>
+              <div className="form-field-index">
                 <input
                   type="text"
                   value={newForm.jobTitle}
@@ -127,8 +127,7 @@ const Index = (props) => {
                   className="form-input"
                 />
               </div>
-              <div className="form-field">
-                <label className="form-label">Company:</label>
+              <div className="form-field-index">
                 <input
                   type="text"
                   value={newForm.company}
@@ -138,8 +137,7 @@ const Index = (props) => {
                   className="form-input"
                 />
               </div>
-              <div className="form-field">
-                <label className="form-label">Notes:</label>
+              <div className="form-field-index">
                 <textarea
                   type="textarea"
                   value={newForm.notes}
@@ -152,11 +150,16 @@ const Index = (props) => {
               <button type="submit">Create Job</button>
             </form>
           </div>
+          <div className='lottie-index'>
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_bcxe9klx.json" background="transparent"  speed="1" loop autoplay></lottie-player>
         </div>
+        </div>
+        
       )}
       <div className='cards'>
         {props.job ? loaded() : loading()}
       </div>
+      
     </div>
   )
 }

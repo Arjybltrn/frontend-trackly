@@ -7,7 +7,7 @@ const Header = (props,{ user }) => {
     
   return (
     <header>
-      <nav>
+      <nav className='navbar'>
         <div className="logo">
           <ul className="nav-links">
           <li><Link to="/jobs"><img src="https://cdn-icons-png.flaticon.com/128/10849/10849305.png" alt="Logo" /></Link></li>
@@ -15,17 +15,17 @@ const Header = (props,{ user }) => {
           </ul>
         </div>
         <ul className="nav-links">
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/jobs">Jobs</Link></li>
+        <li><Link to="/about">ABOUT</Link></li>
+        <li><Link to="/jobs">JOBS</Link></li>
 
             {
                 props.user ?
                 <>
-                    <li> <p>Welcome, {props.user.displayName} </p></li>
+                    <li> <p>{props.user.displayName} </p></li>
                     <li>
                         <img className='profilePhoto' src={props.user.photoURL} alt = {props.user.displayName} />
                     </li>
-                <li onClick={logout}>Logout</li>
+                <li onClick={logout}>SIGN OUT</li>
                 </>
                 :
                 <>

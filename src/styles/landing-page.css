@@ -75,9 +75,6 @@
   
 
   .form-field {
-    height: 46px;
-    padding: 0 16px;
-    border: 2px solid #ddd;
     border-radius: 4px;
     font-family: 'Rubik', sans-serif;
     outline: 0;
