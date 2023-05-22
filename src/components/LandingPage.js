@@ -1,35 +1,35 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { auth } from '../services/firebase';
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import '../styles/landing-page.css';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { auth } from '../services/firebase'
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import '../styles/landing-page.css'
 
 const LandingPage = ({ user }) => {
-  const [isSignUp, setIsSignUp] = useState(false);
-  const [isLogIn, setIsLogIn] = useState(false);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
-  const navigate = useNavigate();
+  const [isSignUp, setIsSignUp] = useState(false)
+  const [isLogIn, setIsLogIn] = useState(false)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState(null)
+  const navigate = useNavigate()
 
   const handleSignUp = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      await auth.createUserWithEmailAndPassword(email, password);
-      setError(null);
+      await auth.createUserWithEmailAndPassword(email, password)
+      setError(null)
     } catch (error) {
-      setError(error.message);
+      setError(error.message)
     }
   };
 
   // login with email and password
   const handleLogIn = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
       await auth.signInWithEmailAndPassword(email, password);
-      setError(null);
-      navigate('/jobs'); // redirect to /jobs after successful login
+      setError(null)
+      navigate('/jobs') // redirect to /jobs after successful login
     } catch (error) {
       setError(error.message);
     }
@@ -41,11 +41,11 @@ const LandingPage = ({ user }) => {
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        setError(null);
-        navigate('/jobs'); // Redirect to /jobs after successful login
+        setError(null)
+        navigate('/jobs') //redirect to /jobs after successful login
       })
       .catch((error) => {
-        setError(error.message);
+        setError(error.message)
       });
   };
 
@@ -55,24 +55,24 @@ const LandingPage = ({ user }) => {
     auth
       .signInWithPopup(provider)
       .then((result) => {
-        setError(null);
-        navigate('/jobs'); // Redirect to /jobs after successful login
+        setError(null)
+        navigate('/jobs') //redirect to /jobs after successful login
       })
       .catch((error) => {
-        setError(error.message);
+        setError(error.message)
       });
   };
 
   const toggleSignUp = () => {
-    setIsSignUp(!isSignUp);
-    setIsLogIn(false);
-    setError(null);
+    setIsSignUp(!isSignUp)
+    setIsLogIn(false)
+    setError(null)
   };
 
   const toggleLogIn = () => {
-    setIsLogIn(!isLogIn);
-    setIsSignUp(false);
-    setError(null);
+    setIsLogIn(!isLogIn)
+    setIsSignUp(false)
+    setError(null)
   };
 
   return (
@@ -166,11 +166,11 @@ const LandingPage = ({ user }) => {
         <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_52ebqe6w.json" background="transparent"  speed="1" loop autoplay></lottie-player>
       </div>
     </div>
-  );
-};
+  )
+}
 
 
 
 
 
-export default LandingPage;
+export default LandingPage
