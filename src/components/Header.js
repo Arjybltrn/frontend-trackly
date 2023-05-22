@@ -11,7 +11,7 @@ const Header = (props,{ user }) => {
         <div className="logo">
           <ul className="nav-links">
           <li><Link to="/jobs"><img src="https://cdn-icons-png.flaticon.com/128/10849/10849305.png" alt="Logo" /></Link></li>
-          <li><Link to="/jobs"><h1>Taskly</h1></Link></li>
+          <li><Link to="/jobs"><h1>TRACKLY</h1></Link></li>
           </ul>
         </div>
         <ul className="nav-links">
