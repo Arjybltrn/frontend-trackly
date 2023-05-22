@@ -114,7 +114,7 @@ const LandingPage = ({ user }) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <button type="submit">Sign Up</button>
+              <button className="signup-button"type="submit">Sign Up</button>
             </form>
           </div>
         )}
@@ -138,7 +138,7 @@ const LandingPage = ({ user }) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <button type="submit">Log In</button>
+              <button className="login-button" type="submit">Log In</button>
             </form>
           </div>
         )}
