@@ -66,6 +66,10 @@ const Show = (props) => {
     <div className="posting-show box2">
       { posting ? loaded() : loading() }
 
+      <div className='lottie-show'>
+        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_iomkzwwh.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+      </div>
+
       { isEditing && 
       <div className="update-form">
           <form onSubmit={handleSubmit}>
@@ -89,6 +93,7 @@ const Show = (props) => {
                   onChange={handleChange}
                 />
             </div>
+  
             <div className="form-field">
                 <textarea
                   className="form-input"
@@ -103,7 +108,9 @@ const Show = (props) => {
                   <img className="show-update" src="https://cdn-icons-png.flaticon.com/128/10371/10371913.png" alt="Update" />
                 </button>
             </form>
+            
       </div>
+      
     }
     </div>
   )
