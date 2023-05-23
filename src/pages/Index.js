@@ -7,7 +7,6 @@ const Index = (props) => {
   const [newForm, setNewForm] = useState({
     jobTitle: '',
     company: '',
-    salary: '',
     notes: '',
   });
 
@@ -24,7 +23,6 @@ const Index = (props) => {
     setNewForm({
       jobTitle: '',
       company: '',
-      salary: '',
       notes: '',
     })
   }

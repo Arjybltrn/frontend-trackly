@@ -10,9 +10,10 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 <li><a href="#features">Features</a></li>
 <li><a href="#technologies-used">Technologies Used</a></li>
 <li><a href="#screenshots">Screenshots</a></li>
-<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#installation">Installation</a></li>
 <li><a href="#future-enhancements">Future Enhancements</a></li>
-<li><a href="#github-stats">GitHub Stats</a></li>
+<li><a href="#stay-in-touch">Stay In Touch</a></li>
 </details>
 
 ## Features
@@ -21,6 +22,12 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 - Create a new job posting
 - Update job details
 - Delete a job posting
+
+<div align="right">
+    <a href="#top">🔝</a>
+</div>
+
+---
 
 ## Technologies Used
 
@@ -33,6 +40,8 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 
 
 
+
+
 ### Backend Deployment
 <p align="center">
 
@@ -40,10 +49,22 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 
 </p>
 
+<div align="right">
+    <a href="#top">🔝</a>
+</div>
+
+---
+
 ## Screenshots
 
 <img src="src/md_imgs/landing.png" width="700" height="381" alt="landing" />
 <img src="src/md_imgs/index.png" width="700" height="381" alt="index" />
+
+<div align="right">
+    <a href="#top">🔝</a>
+</div>
+
+---
 
 ## Resources
 
@@ -52,7 +73,11 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 - <a href="https://lottiefiles.com/" target="_blank"><span>lottiefiles.com</span></a>
 - <a href="https://fonts.google.com/" target="_blank"><span>fonts.google.com</span></a>
 
+<div align="right">
+    <a href="#top">🔝</a>
+</div>
 
+---
   
 
 ## Installation
@@ -69,6 +94,12 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 
    ```shell
    npm start
+
+<div align="right">
+    <a href="#top">🔝</a>
+</div>
+
+---
 ## API Endpoints
 - GET /jobs - Retrieve a list of all jobs.
 - POST /jobs - Create a new job.
@@ -76,6 +107,18 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 - DELETE /jobs/:id - Delete a job by ID.
 
 
+<div align="right">
+    <a href="#top">🔝</a>
+</div>
+
+---
+
+
+## Future Enhancements
+
+- Ability to bookmark or save a job
+- Ability to add link to the job posting
+- Track where the job listing was posted
 
 
 <div align="right">
