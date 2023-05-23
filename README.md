@@ -58,7 +58,7 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 ## Screenshots
 
 <img src="src/md_imgs/landing.png" width="700" height="381" alt="landing" />
-<img src="src/md_imgs/index.png" width="700" height="381" alt="index" />
+<img src="src/md_imgs/index.PNG" width="700" height="381" alt="index" />
 
 <div align="right">
     <a href="#top">🔝</a>
