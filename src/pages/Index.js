@@ -69,7 +69,7 @@ const Index = (props) => {
         <div className="posting">
           <h1 className='job-title'>{posting.jobTitle}</h1>
           <h3 className='company'>{posting.company}</h3>
-          {/* <h4 className='notes'>{posting.notes}</h4> */}
+          <h4 className='notes'>{posting.notes}</h4> 
 
           <div className='set-icons'>
             <Link to={`/jobs/${posting._id}`} className='icon-link'>
@@ -137,7 +137,7 @@ const Index = (props) => {
                   className="form-input"
                 />
               </div>
-              {/* <div className="form-field-index">
+              <div className="form-field-index">
               <textarea
                   type="textarea"
                   value={newForm.notes}
@@ -146,7 +146,7 @@ const Index = (props) => {
                   onChange={handleChange}
                   className="form-input"
                 />
-              </div> */}
+              </div> 
               <button className='create-button' type="submit">CREATE</button>
             </form>
           </div>

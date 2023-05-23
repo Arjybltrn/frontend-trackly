@@ -45,6 +45,14 @@ Netlify - <a href="https://legendary-halva-8abb3f.netlify.app/" target="_blank">
 <img src="src/md_imgs/landing.png" width="700" height="381" alt="landing" />
 <img src="src/md_imgs/index.png" width="700" height="381" alt="index" />
 
+## Resources
+
+- <a href="https://cssgradient.io/" target="_blank"><span>cssgradient.io</span></a>
+- <a href="https://flaticon.com/" target="_blank"><span>flaticon.com</span></a>
+- <a href="https://lottiefiles.com/" target="_blank"><span>lottiefiles.com</span></a>
+- <a href="https://fonts.google.com/" target="_blank"><span>fonts.google.com</span></a>
+
+
   
 
 ## Installation

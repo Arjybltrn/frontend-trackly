@@ -89,7 +89,7 @@ const Show = (props) => {
                   onChange={handleChange}
                 />
             </div>
-            {/* <div className="form-field">
+            <div className="form-field">
                 <textarea
                   className="form-input"
                   type="textarea"
@@ -98,7 +98,7 @@ const Show = (props) => {
                   placeholder="notes"
                   onChange={handleChange}
                   />
-            </div> */}
+            </div> 
                 <button type="submit" value="Update Job" className="show-update-button" >
                   <img className="show-update" src="https://cdn-icons-png.flaticon.com/128/10371/10371913.png" alt="Update" />
                 </button>
