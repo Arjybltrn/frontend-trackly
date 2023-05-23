@@ -222,6 +222,7 @@ h4, .notes {
     grid-row: 3 / 4;
     margin-top: 10px;
     padding-top: 10px;
+    font-size: 15px;
 }
 
 .set-icons {
