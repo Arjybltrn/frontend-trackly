@@ -63,12 +63,10 @@ const Show = (props) => {
   };
 
   return (
+    <div className="show-body">
     <div className="posting-show box2">
       { posting ? loaded() : loading() }
 
-      <div className='lottie-show'>
-        <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_iomkzwwh.json" background="transparent"  speed="1" loop autoplay></lottie-player>
-      </div>
 
       { isEditing && 
       <div className="update-form">
@@ -112,6 +110,7 @@ const Show = (props) => {
       </div>
       
     }
+    </div>
     </div>
   )
 }
